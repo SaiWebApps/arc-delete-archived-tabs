@@ -1,4 +1,4 @@
-CRONTAB_CADENCE="*/5 * * * *" # ie. Every 5th minute
+CRONTAB_CADENCE="* * * * *" # ie. Every minute
 SCRIPT_FILENAME=arc-delete-tab-archive.sh
 CRONTAB_ENTRY="$CRONTAB_CADENCE $(pwd)/$SCRIPT_FILENAME"
 
