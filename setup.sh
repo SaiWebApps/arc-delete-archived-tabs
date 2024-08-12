@@ -1,5 +1,5 @@
 CRONTAB_CADENCE="* * * * *" # ie. Every minute
-SCRIPT_FILENAME=arc-delete-tab-archive.sh
+SCRIPT_FILENAME=clear_arc_archive.sh
 CRONTAB_ENTRY="$CRONTAB_CADENCE $(pwd)/$SCRIPT_FILENAME"
 
 if !(crontab -l | grep -q "$SCRIPT_FILENAME")
