@@ -1,10 +1,15 @@
 #!/bin/sh
 
+delete_resources() {
+  for resource in ${RESOURCES_TO_DELETE[@]}; do
+    rm -rf $resource
+  done
+}
+
 cd $HOME/Library/Application\ Support/Arc
 RESOURCES_TO_DELETE=(*Cache StorableArchive*.json StorableWindows*.json StorableDownload*.json StorableLiveData*.json)
-for resource in ${RESOURCES_TO_DELETE[@]}; do
-  rm -rf $resource
-done
+delete_resources $RESOURCES_TO_DELETE
 
 cd $HOME/Library/Application\ Support/Arc/User\ Data/Default
-find . ! -name '*Extensions*' -delete
+RESOURCES_TO_DELETE=(*Cache* *Bookmarks* *Cookies* *History* *Visited*)
+delete_resources $RESOURCES_TO_DELETE
