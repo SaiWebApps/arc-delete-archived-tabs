@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf "~/Library/Application\ Support/Arc/StorableArchive*.json"
+rm -rf $HOME/Library/Application\ Support/Arc/StorableArchive*.json
