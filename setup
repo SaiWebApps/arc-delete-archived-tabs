@@ -1,5 +1,5 @@
 CRONTAB_CADENCE="* * * * *" # ie. Every minute
-SCRIPT_FILENAME=cleararc
+SCRIPT_FILENAME=cleararc.py
 CRONTAB_ENTRY="$CRONTAB_CADENCE $(pwd)/$SCRIPT_FILENAME"
 
 if !(crontab -l | grep -q "$SCRIPT_FILENAME")
