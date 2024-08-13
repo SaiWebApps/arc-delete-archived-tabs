@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd $HOME/Library/Application\ Support/Arc
+RESOURCES_TO_DELETE=(StorableArchive*.json StorableWindows*.json StorableDownload*.json)
+for resource in ${RESOURCES_TO_DELETE[@]}; do
+  rm -rf $resource
+done

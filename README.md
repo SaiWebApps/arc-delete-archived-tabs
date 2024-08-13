@@ -8,7 +8,7 @@ A script which deletes archived Arc tabs at regular intervals.
 
 ## Setup
 1. Clone this repository
-2. Run `./setup.sh`
+2. Run `./setup`
 
 ## Manual Setup
 1. Clone this repository
@@ -16,11 +16,11 @@ A script which deletes archived Arc tabs at regular intervals.
 3. Add an entry for the script:
     ```sh
     # Delete archived Arc tabs every 5 minutes
-    */5 * * * * <PATH_TO_REPOSITORY>/arc-delete-tab-archive.sh
+    */5 * * * * <PATH_TO_REPOSITORY>/cleararc
     ```
 
 ## Notes
 - Arc must be restarted in order for the archived tabs to disappear
-- The default cron schedule is every 5 minutes. This can be adjusted in `setup.sh` (or with `crontab -e` after setup is complete)
+- The default cron schedule is every 5 minutes. This can be adjusted in `setup` (or with `crontab -e` after setup is complete)
 - This script has only been tested with Arc `0.108.1` on MacOS Ventura (`13.3.1`)
-- This script can be manually executed by running `./arc-delete-tab-archive.sh`
+- This script can be manually executed by running `./cleararc`
