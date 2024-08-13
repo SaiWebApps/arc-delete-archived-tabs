@@ -2,7 +2,7 @@
 
 delete_resources() {
   for resource in ${RESOURCES_TO_DELETE[@]}; do
-    rm -rf $resource
+    find . -name "$resource" -delete
   done
 }
 
